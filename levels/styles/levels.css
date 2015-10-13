@@ -1,0 +1,116 @@
+body{
+    background: #222;
+}
+
+.navbar{
+    background: #555;
+}
+
+.navbar .navbar-brand{
+    color:#C0C0C0;
+}
+
+.navbar .nav a{
+    color:#C0C0C0;
+}
+
+
+.heading{
+    font-family: sans-serif 'Arial';
+    font-size: 30px;
+    text-align: center;
+    color:white;      
+}
+
+.sub-heading{
+    font-family: sans-serif 'Arial';
+    font-size: 25px;
+    text-align: center;
+    color:white; 
+}
+
+
+.table-cont{
+    
+    text-align: center;
+}
+
+.table-cont table, th, tr, td{
+    border: 1px solid white;
+    color:white;
+}
+
+.table-cont table{
+    width:1400px;
+    border-collapse: collapse;
+}
+
+.table-cont th{
+    font-family: sans-serif 'Arial';
+    color:white; 
+    font-size: 40px;
+    width:1200px;
+    height: 120px;
+}
+
+.table-cont tr{
+    color:white;
+}
+
+.table-cont td{
+    color:white;
+    font-size: 30px;
+    width:1200px;
+    height: 140px;
+    font-family: monospace;
+    text-align: center;
+}
+
+
+.table-cont button{
+    text-align: center;
+    height: 35px;
+    width: 200px;
+    font-size: 20px;
+    font-family: monospace;
+    background: #666;
+    color:white;
+}
+
+.menu-cont{
+    
+    position: absolute;
+    bottom: 120px;
+    left:815px;
+}
+
+.menu ul{
+    text-align: center;
+}
+
+.menu li{
+    list-style: none outside none;
+}
+
+#leaderboards-button{
+    
+    
+    text-align: center;
+    height: 35px;
+    width: 200px;
+    
+    font-size: 20px;
+    font-family: monospace;
+    background: #666;
+    color:white;
+}
+
+
+.rights{
+    color:white;
+    position: absolute;
+    left:690px;
+    right:700px;
+    bottom:5px;
+    text-align: center;
+}

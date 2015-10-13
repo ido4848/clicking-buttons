@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Clicking Buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only" >Toggle navigation</span>
+                    <span class=" test glyphicon glyphicon-align-justify"></span>
+                </button>
+                <a class="navbar-brand" href="#">Clicking Buttons Game</a>
+            </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#levels.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Levels <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Classic</li>
+                <li><a href="levels/level1.html">Level 1</a></li>
+                <li><a href="levels/level2.html">Level 2</a></li>
+                <li><a href="levels/level3.html">Level 3</a></li>
+            <!--       
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Advanced</li>
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 5</a></li>
+                <li><a href="#">Level 6</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Crazy</li>
+                <li><a href="#">Level 7</a></li>
+                <li><a href="#">Level 8</a></li>
+                <li><a href="#">Level 9</a></li>
+            -->
+            </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#..\leaderboards\main-leaderboard.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leaderboards <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Classic</li>
+                <li><a href="leaderboards/leaderboard-level1.html">Leaderboard Level 1</a></li>
+                <li><a href="leaderboards/leaderboard-level2.html">Leaderboard Level 2</a></li>
+                <li><a href="leaderboards/leaderboard-level3.html"> Leaderboard Level 3</a></li>
+            <!--
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Advanced</li>
+                <li><a href="#">Leaderboard Level 4</a></li>
+                <li><a href="#">Leaderboard Level 5</a></li>
+                <li><a href="#">Leaderboard Level 6</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Crazy</li>
+                <li><a href="#">Leaderboard Level 7</a></li>
+                <li><a href="#">Leaderboard Level 8</a></li>
+                <li><a href="#">Leaderboard Level 9</a></li>
+            -->
+            </ul>
+            </li>
+        </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>   
+
+    <div class="container">
+        <p class="heading col-sm-12">Home</p>
+    </div>
+    <br>
+    <div class="container">
+        <p class="my-text">
+            This is the Great and Wonerfull:<br>
+            Clicking Buttons Game!<br><br>
+            In this game you'll be expected to click buttons,<br>
+            To click buttons, FAST.<br><br><br>
+            Are you ready?<br>
+
+        </p>
+    </div>
+
+
+    <div class="container">
+    <div class="text-center">
+        <p class="my-text">START NOW WITH LEVEL 1!</p>
+        <a href="levels/level1.html" class="btn level1-button" role="button">   Level 1
+        </a>
+    </div>
+    </div>
+
+    <br><br>
+    <div class="container">
+    <div class="rights col-sm-12">©All rights reserved to Ido Aizenbud 2015©</div>
+    </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>
+            jQuery(function($) {
+            $('.navbar .dropdown').hover(function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+
+            }, function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+            });
+
+            $('.navbar .dropdown > a').click(function(){
+            location.href = this.href;
+            });
+
+            });
+      </script>
+
+</body>
+
+</html>

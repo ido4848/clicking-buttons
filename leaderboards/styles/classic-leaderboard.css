@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    background: #222;
+}
+
+.glyphicon {
+    font-size: 17px;
+    color:#C0C0C0;
+}
+
+.mynavbar-color{
+    color:#C0C0C0;
+}
+
+.navbar{
+    background: #666;
+
+}
+
+.navbar .navbar-brand{
+    color:#C0C0C0;
+}
+
+.navbar .nav a{
+    color:#C0C0C0;
+}
+
+.cont-heading{
+    height: 8%
+}
+
+.heading{
+    font-family: sans-serif 'Arial';
+    font-size: 5vmin;
+    text-align: center;
+    color:white;
+    height: 85%;      
+}
+
+
+.table-cont{
+    
+    text-align: center;
+}
+
+.table-cont table, th, tr, td{
+    border: 1px solid white;
+    color:white;
+}
+
+.table-cont th,td{
+    font-size: 5vmin;
+}
+
+/*
+.table-cont table{
+    width:800px;
+    border-collapse: collapse;
+}
+
+.table-cont th{
+    color:white; 
+    width:400px;
+}
+
+.table-cont tr{
+    color:white;
+}
+
+.table-cont td{
+    color:white;
+    width: 400px;
+}
+*/
+
+
+.cont-rights{
+}
+
+.rights{
+    color:white;
+    text-align: center;
+}

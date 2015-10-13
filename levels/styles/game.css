@@ -1,0 +1,231 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    background: #222;
+}
+
+.glyphicon {
+    font-size: 17px;
+    color:#C0C0C0;
+}
+
+.mynavbar-color{
+    color:#C0C0C0;
+}
+
+.navbar{
+    background: #666;
+
+}
+
+.navbar .navbar-brand{
+    color:#C0C0C0;
+}
+
+.navbar .nav a{
+    color:#C0C0C0;
+}
+
+.cont-heading{
+    height: 8%
+}
+
+.heading{
+    font-family: sans-serif 'Arial';
+    font-size: 5vmin;
+    text-align: center;
+    color:white;
+    height: 85%;      
+}
+
+.cont-main{
+    height:60%;
+}
+
+.empty-cont{
+    height: 0%;
+}
+
+
+.game-table{
+    border: none;
+    border-top: none !important; 
+    display: table;
+    table-layout: fixed;
+    height: 95%;
+}
+
+.game-table td{
+    border: none;
+    border-top: none !important; 
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.game-button{
+    color:black;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    height: 90%;
+    width: 90%;
+
+    font-family: monospace;
+    font-size: 8vmin;
+    background: #666;
+    color:white;
+}
+
+.greyed{
+    opacity: 0.3;
+}
+
+
+.cont-menu{
+    text-align: center;
+    height: 13%;
+    width:100%;
+}
+
+/*
+small- height30%;
+biggest- height50%;
+ */
+
+.cont-timer{
+    text-align: center;
+    height:30%;
+}
+
+
+/*
+small- font-size:2vh;
+big- font-size:5vh;
+bigger 7vh
+ */
+.cont-timer #timer{
+    font-size:5vh;
+    color:white;
+    
+}
+
+.cont-input{
+    opacity: 0;
+    text-align: center;
+    height: 30%
+}
+
+.cont-input #name-input{
+    font-family: monospace;
+    text-align: center;
+    font-size: 2vh;
+    height: 80%;
+    
+}
+
+.cont-input #enter-result-button{
+    font-family: monospace;
+    background: #666;
+    color:white;
+    font-size: 2vh;
+    height: 80%;
+}
+
+
+/*
+small- heigh:40%;
+big- height:20%;
+ */
+.cont-start-button{
+    height: 40%
+}
+
+
+
+/*
+small- font-size:3vh;
+big- font-size:1.3vh;
+ */
+
+.menu-button{
+    text-align: center;
+    font-family: monospace;
+    font-size: 3vh;
+    background: #666;
+    color:white;
+    height: 90%;
+    width: 50%
+}
+
+
+
+.cont-rights{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    left:0;
+    height: 3%;
+}
+
+
+
+.rights{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    left:0;
+    color:white;
+    text-align: center;
+}
+
+
+/*
+
+    .game-table, .game-table td, .game-table tr{
+    border: blue;
+    border-spacing: 10px    
+}
+
+    border: none;
+    border-top: none !important; 
+ 
+.table-cont table{
+    border-spacing: 10px;
+}
+.table-cont td {
+    padding: 0px;
+    display: table-cell;
+    vertical-align: left;
+           
+}
+
+
+.parent {
+    display: table;
+    table-layout: fixed;
+}
+
+.child {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+*/
+
+/*
+.menu{
+    position: absolute;
+    top:110px;
+    right:530px;
+}
+
+
+*/
+
+
+
+

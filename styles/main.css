@@ -1,0 +1,60 @@
+body{
+    background: #222;
+}
+
+.glyphicon {
+    font-size: 17px;
+    color:#C0C0C0;
+}
+
+.mynavbar-color{
+    color:#C0C0C0;
+}
+
+.navbar{
+    background: #666;
+}
+
+.navbar .navbar-brand{
+    color:#C0C0C0;
+}
+
+.navbar .nav a{
+    color:#C0C0C0;
+}
+
+.heading {
+    font-family: sans-serif 'Arial';
+    font-size: 30px;
+    text-align: center;
+    color:white;      
+}
+
+.sub-heading{
+    font-family: sans-serif 'Arial';
+    font-size: 25px;
+    text-align: center;
+    color:white; 
+}
+
+.my-text{
+    font-family: sans-serif 'Arial';
+    font-size: 20px;
+    text-align: center;
+    color:white; 
+
+}
+
+.level1-button{
+    text-align: center;
+    font-family: monospace;
+    font-size: 3vh;
+    background: #666;
+    color:white;
+    width: 50%
+}
+
+.rights{
+    color:white;
+    text-align: center;
+}
