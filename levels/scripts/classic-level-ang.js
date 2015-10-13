@@ -1,3 +1,49 @@
+// create the module and name it scotchApp
+var classicLevelApp = angular.module('classicLevelApp', ['ngRoute']);
+
+// configure our routes
+classicLevelApp.config(function($routeProvider) {
+    $routeProvider
+        .when('/:param1',{
+            templateUrl : 'table.html',
+            controller  : 'tableCtrl'
+        })
+
+});
+
+// create the controller and inject Angular's $scope
+classicLevelApp.controller('headingCtrl', function($scope) {
+    // create a message to display in our view
+    $scope.title = 'Classic Level';
+});
+
+
+classicLevelApp.controller('tableCtrl', ['$scope','$routeParams', function($scope, $routeParams) {
+    var param1 = $routeParams.param1;
+    var N=param1;
+    $('.heading').text("Level "+N);
+    arr2d=[];
+    //N=N+1;
+    var count=1;
+    for (var i = 1; i <= N; i++) {
+        currArr=[];
+        for(var j = 1; j <= N; j++){
+            currArr.push(count);
+            count+=1;
+        }
+        arr2d.push(currArr);
+    }
+    $scope.N=param1;
+    $scope.arr2d=arr2d;
+    main();
+    $('#start-button').click(function(){
+        $('#start-button').unbind('click');
+        timerBiggest();
+        gameStart('from the tableCtrl');
+    });
+}]);
+
+
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
 
@@ -27,10 +73,12 @@ function clearLocalStorage(){
 
 function adjustLevelSize(){
     var pageid=localStorage.getItem("page-id");
+    /*
     var N=parseInt(pageid);
     N=N+1;
     var fontsize=0.375*N*N-4.475*N+14.475;
     $('.game-button').css("font-size", fontsize+"vmin");
+    */
 }
 
 
@@ -102,25 +150,21 @@ function timerSmall(){
 
 
 function main(){
+    //$('.game-button').addClass("hidden");
     var pageid=$('.heading').text().replace(/\D/g,'');
     localStorage.setItem("page-id",pageid);
     adjustLevelSize();
 
     clearLocalStorage();
     localStorage.setItem("win",false); 
-    $('#start-button').click(function(){
-        $('#start-button').unbind('click');
-        timerBiggest();
-        gameStart();
-    });
 }
 
 
-function gameStart(){
+function gameStart(Str){
+    console.log('gameStart is on from '+Str)
     var pageid=localStorage.getItem("page-id");
     var arr=[];
     var N=parseInt(pageid);
-    N=N+1
     N=(N)*(N);
     for (var i = 1; i <= N; i++) {
        arr.push(i);
@@ -153,6 +197,7 @@ function timerManage(){
 }
 
 function turnManage(){
+    console.log('turn Manage is on')
     var currArr=JSON.parse(localStorage.getItem("arr"));
     if(currArr.length==0){
         win();
@@ -236,5 +281,3 @@ function gameRestart(){
 
     gameStart();
 }
-
-$(document).ready(main);

@@ -1,9 +1,9 @@
 <!doctype html>
-<html>
+<html ng-app="classicLevelApp">
 
 <head>
     <meta charset="utf-8">
-    <title>Clicking Buttons - Level 3</title>
+    <title>Clicking Buttons - Level 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="../favicon.ico">
@@ -16,8 +16,34 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="styles/game.css">
+<link rel="stylesheet" href="styles/game.css">
     <!-- endbuild -->
+<!-- SPELLS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+<script src="scripts/classic-level-ang.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    jQuery(function($) {
+    $('.navbar .dropdown').hover(function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+
+    }, function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+    });
+
+    $('.navbar .dropdown > a').click(function(){
+    location.href = this.href;
+    });
+
+    });
+</script>
+
+
+
 </head>
 
 <body>
@@ -43,8 +69,7 @@
                 <li class="dropdown-header">Classic</li>
                 <li><a href="level1.html">Level 1</a></li>
                 <li><a href="level2.html">Level 2</a></li>
-                <li><a href="#">Level 3</a></li>
-                <li><a href="level4.html">Level 4</a></li>
+                <li><a href="level3.html">Level 3</a></li>
             <!--       
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Advanced</li>
@@ -86,38 +111,16 @@
     </div><!-- /.container-fluid -->
 </nav>   
 
-<div class="container cont-heading">
-    <p class="heading col-sm-12">Level 3</p>
+<div class="container cont-heading" ng-controller="headingCtrl">
+    <p class="heading col-sm-12">{{title}}</p>
 </div>
 
-<div class="container-fluid cont-main text-center">
-    <div class="empty-cont"></div>
-    <table class="table-responsive table game-table">
-        <tr>
-            <td class="text-center"><button class="game-button hidden" id="button1">button1</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button2">button2</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button3">button3</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button4">button4</button></td>
-        </tr>
-        <tr>
-            <td class="text-center"><button class="game-button hidden" id="button5">button5</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button6">button6</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button7">button7</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button8">button8</button></td>
-        </tr>
-        <tr>
-            <td class="text-center"><button class="game-button hidden" id="button9">button9</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button10">button10</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button11">button11</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button12">button12</button></td>
-        </tr>
-        <tr>
-            <td class="text-center"><button class="game-button hidden" id="button13">button13</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button14">button14</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button15">button15</button></td>
-            <td class="text-center"><button class="game-button hidden" id="button16">button16</button></td>
-        </tr>
-    </table>
+<div ng-controller="tableCtrl" id="main">
+
+<!-- angular templating -->
+    <!-- this is where content will be injected -->
+<div ng-view></div>
+
 </div>
 
 <div class="container text-center cont-menu">
@@ -142,26 +145,6 @@
      <div class="rights col-sm-12">©All rights reserved to Ido Aizenbud 2015©</div>
  </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="scripts/classic-level.js"></script>
-<script>
-    jQuery(function($) {
-    $('.navbar .dropdown').hover(function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
-
-    }, function() {
-    $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
-
-    });
-
-    $('.navbar .dropdown > a').click(function(){
-    location.href = this.href;
-    });
-
-    });
-</script>
 
 </body>
 

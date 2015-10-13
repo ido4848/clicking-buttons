@@ -1,0 +1,25 @@
+<div class="container-fluid cont-main text-center">
+    <div class="empty-cont"></div>
+    <table class="table-responsive table game-table">
+
+		<tr ng-repeat="arr in arr2d">
+			<td ng-repeat="item in arr" class="text-center"><button class="game-button hidden" ng-attr-id="{{ 'button' + item }}">{{item}}</button></td>
+	  	</tr>
+    </table>
+
+</div>
+
+<!-- TODO: ADD HIDDEN TO EACH BUTTON-
+
+		    	<td ng-repeat="item in arr" class="table-text">{{ item }}</td>
+        <tr>
+            <td class="text-center"><button class="game-button " id="button1">button1</button></td>
+            <td class="text-center"><button class="game-button " id="button2">button2</button></td>
+        </tr>
+        <tr>
+            <td class="text-center"><button  class="game-button " id="button3">button3</button></td>
+            <td class="text-center"><button  class="game-button " id="button4">button4</button></td>
+        </tr>
+
+
+->
