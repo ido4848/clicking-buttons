@@ -38,13 +38,13 @@ function adjustLevelSize(){
     /*
     switch(pageid){
         case "1":
-            $('.game-button').css("font-size", "7vmin");
+            $('.game-button').css("font-size", "13vmin");
             break;
         case "2":
-            $('.game-button').css("font-size", "4.5vmin");
+            $('.game-button').css("font-size", "8vmin");
             break;
         case "3":
-            $('.game-button').css("font-size", "2.5vmin");
+            $('.game-button').css("font-size", "6vmin");
             break;
         case "4":
             $('.game-button').css("font-size", "1.5vmin");
