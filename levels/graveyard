@@ -1,0 +1,107 @@
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only" >Toggle navigation</span>
+                    <span class=" test glyphicon glyphicon-align-justify"></span>
+                </button>
+                <a class="navbar-brand" href="#">Clicking Buttons Game</a>
+            </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#levels.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Levels <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Classic</li>
+                <li><a href="#">Level 1</a></li>
+                <li><a href="level2.html">Level 2</a></li>
+                <li><a href="level3.html">Level 3</a></li>
+            <!--       
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Advanced</li>
+                <li><a href="#">Level 4</a></li>
+                <li><a href="#">Level 5</a></li>
+                <li><a href="#">Level 6</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Crazy</li>
+                <li><a href="#">Level 7</a></li>
+                <li><a href="#">Level 8</a></li>
+                <li><a href="#">Level 9</a></li>
+            -->
+            </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#../leaderboards/main-leaderboard.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leaderboards <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Classic</li>
+                <li><a href="../leaderboards/leaderboard-level1.html">Leaderboard Level 1</a></li>
+                <li><a href="../leaderboards/leaderboard-level2.html">Leaderboard Level 2</a></li>
+                <li><a href="../leaderboards/leaderboard-level3.html"> Leaderboard Level 3</a></li>
+            <!--
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Advanced</li>
+                <li><a href="#">Leaderboard Level 4</a></li>
+                <li><a href="#">Leaderboard Level 5</a></li>
+                <li><a href="#">Leaderboard Level 6</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Crazy</li>
+                <li><a href="#">Leaderboard Level 7</a></li>
+                <li><a href="#">Leaderboard Level 8</a></li>
+                <li><a href="#">Leaderboard Level 9</a></li>
+            -->
+            </ul>
+            </li>
+        </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>  
+
+
+
+var APP = {};
+
+var Holder = React.createClass({
+  getInitialState: function (){
+    return {count: 0};
+  },
+  componentDidMount: function(){
+    $(APP).on('up', function(e){
+      var count = this.state.count + 1;
+      this.setState({count: count});
+    }.bind(this));
+
+    $(APP).on('down', function(e){
+      var count = (this.state.count - 1);
+      this.setState({count: count});
+    }.bind(this));
+  },
+  componentWillUnmount: function () {
+    $(APP).off('up');
+    $(APP).off('down');
+  },
+  render: function() {
+    var count = this.state.count;
+    return <span>{count}</span>;
+  }
+});
+
+var Counter = React.createClass({
+  decrement: function() {
+    $(APP).trigger('down');
+  },
+  increment: function() {
+    $(APP).trigger('up');
+  },
+  render: function(){
+    return (<div>
+      <button onClick={this.increment} >Increment</button>
+      <button onClick={this.decrement} >Decrement</button>
+    </div>)
+  }
+});
